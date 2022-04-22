@@ -348,10 +348,70 @@ body {
             display: inline-block;
             padding: 0 10px;
             border-right: 2px solid #fff;
+            &:last-child {
+                border-right: none;
+            }
         }
         a {
             font-weight: 700;
             line-height: 28px;
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    .advantages {
+        &__text {
+            padding: 0px 0px 0px 20px;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .design {
+        &__images {
+            margin: 0px 0px 50px 0px;
+        }
+        &-row {
+            display: block;
+            margin: 0px 0px 50px 0px;
+            &__item {
+                max-width: 100%;
+                margin: 0px 0px 30px 0px;
+                &-text {
+                    max-width: 100%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 930px) {
+    .advantages {
+        &-inner {
+            &__row {
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 0px 0px 50px 0px;
+                &--reverse {
+                    .advantages-descr {
+                        order: -1;
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+        }
+        &-descr {
+            text-align: center;
+        }
+        &__title {
+            position: static;
+        }
+        &__text {
+            margin: 25px auto;
+            padding: 0px 0px 0px 0px;
         }
     }
 }
@@ -371,7 +431,21 @@ body {
     }
 }
 
+@media (max-width: 650px) {
+    .advantages {
+        &-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 @media (max-width: 410px) {
+    body {
+        font-size: 20px;
+        line-height: 24px;
+    }
     .header {
         &__logo {
             &-image {
@@ -380,7 +454,7 @@ body {
         }
         &-content {
             &__title {
-                font-size: 70px;
+                font-size: 60px;
                 line-height: 85px;
                 margin: 20px 0px 40px 0px;
             }
